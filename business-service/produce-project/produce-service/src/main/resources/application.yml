@@ -1,0 +1,19 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: produce-service
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${server.port}:${spring.application.name}:${spring.application.instance_id:${random.value}}

@@ -6,10 +6,10 @@ spring:
     name: consume-service
   cloud:
     config:
-      profile: dev
+      profile: test
       discovery:
         enabled: true
-        service-id: config-service
+      uri: http://127.0.0.1:8888/
 
 eureka:
   client:

@@ -9,7 +9,7 @@ spring:
       profile: dev
       discovery:
         enabled: true
-        service-id: config-service
+      uri: http://127.0.0.1:8888/
 
 eureka:
   client:

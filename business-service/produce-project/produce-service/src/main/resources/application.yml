@@ -11,9 +11,20 @@ spring:
         enabled: true
       uri: http://127.0.0.1:8888/
       name: ${spring.application.name}
+  boot:  #spirng admin 配置
+    admin:
+      client:
+        url: http://127.0.0.1:8020/
+        username: admin
+        password: admin
+        instance:
+          prefer-ip: true
 
 # 暴露所有actuator端点(2.0+配置方法)
 management:
+  endpoint:
+    health:
+      show-details: always
   endpoints:
     web:
       exposure:
@@ -26,3 +37,7 @@ eureka:
       defaultZone: http://127.0.0.1:8761/eureka/
   instance:
     instanceId: ${spring.cloud.client.hostname}:${server.port}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+feign:
+  hystrix:
+    enabled: true # 启动hystrix熔断机制

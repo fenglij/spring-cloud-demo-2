@@ -12,6 +12,13 @@ spring:
       uri: http://127.0.0.1:8888/
       name: ${spring.application.name}
 
+# 暴露所有actuator端点(2.0+配置方法)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 eureka:
   client:
     serviceUrl:

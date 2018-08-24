@@ -10,6 +10,11 @@ spring:
       discovery:
         enabled: true
       uri: http://127.0.0.1:8888/
+      name: ${spring.application.name}
+
+endpoints:
+  refresh:
+    enabled: true
 
 eureka:
   client:

@@ -26,3 +26,7 @@ eureka:
       fetch-registry: true #是否从服务注册中心获取可用的服务清单，默认为true，PS：服务注册好后大概需要30秒才能被发现？？？ß
   instance:
     instanceId: ${spring.cloud.client.hostname}:${server.port}:${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+feign:
+  hystrix:
+    enabled: true # 启动hystrix熔断机制

@@ -8,8 +8,9 @@ spring cloud demo(基于springcloud 2.0.1)
 5. Admin 应用监控
 6. Hystrix board 整合
 
-Hystrix board 使用：
-地址栏输入：http://localhost:8030/hystrix
-在Hystrix Dashboard下输入：
-http://localhost:8000/actuator/hystrix.stream
+# Hystrix board 使用：<br>
+地址栏输入：<br>
+http://localhost:8030/hystrix<br>
+在Hystrix Dashboard下输入：<br>
+http://localhost:8000/actuator/hystrix.stream<br>
 点击：Monitor Stream 进入界面

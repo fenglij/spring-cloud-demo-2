@@ -16,6 +16,7 @@
         <module>config-service</module>
         <module>admin-service</module>
         <module>hystrix-service</module>
+        <module>core-service</module>
     </modules>
 
 

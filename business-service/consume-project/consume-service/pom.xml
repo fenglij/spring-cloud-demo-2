@@ -69,6 +69,13 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <!-- 添加核心依赖 -->
+        <dependency>
+            <groupId>com.spring.cloud</groupId>
+            <artifactId>core-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
     <repositories>

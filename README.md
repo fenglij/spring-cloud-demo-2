@@ -6,3 +6,10 @@ spring cloud demo(基于springcloud 2.0.1)
 3. Hystrix 熔断
 4. Feign 声明式服务调用
 5. Admin 应用监控
+6. Hystrix board 整合
+
+Hystrix board 使用：
+地址栏输入：http://localhost:8030/hystrix
+在Hystrix Dashboard下输入：
+http://localhost:8000/actuator/hystrix.stream
+点击：Monitor Stream 进入界面

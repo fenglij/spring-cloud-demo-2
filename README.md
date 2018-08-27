@@ -7,6 +7,7 @@ spring cloud demo(基于springcloud 2.0.1)
 4. Feign 声明式服务调用
 5. Admin 应用监控
 6. Hystrix board 整合
+7. 添加核心业务依赖 core-service
 
 # Hystrix board 使用：<br>
 地址栏输入：<br>

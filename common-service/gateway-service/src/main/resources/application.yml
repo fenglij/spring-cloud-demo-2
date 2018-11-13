@@ -1,0 +1,28 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      #具体的路由信息，是一个数组
+      routes:
+      #路由的唯一id，不定义的话为一个uuid
+      - id: consume-service-${random.value}
+        #http请求为lb://前缀 + 服务id；ws请求为lb:ws://前缀 + 服务id；表示将请求负载到哪一个服务上
+        uri: lb://consume-service
+        #表示这个路由的请求匹配规则，只有符合这个规则的请求才会走这个路由。为一个数组，每个规则为并且的关系
+        predicates:
+        - Path=/consume-service/**
+        #请求转发前的filter，为一个数组
+        filters:
+        #URI 截取，/consume-service/consume，StripPrefix=1 则截取结果为 /consume
+        - StripPrefix=1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${server.port}:${spring.application.name}:${spring.application.instance_id:${random.value}}

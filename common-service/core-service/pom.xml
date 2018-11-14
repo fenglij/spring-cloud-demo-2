@@ -14,9 +14,9 @@
 
     <parent>
         <groupId>com.spring.cloud</groupId>
-        <artifactId>demo</artifactId>
+        <artifactId>common-service</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../</relativePath>
     </parent>
 
     <dependencies>
@@ -61,12 +61,7 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.51</version>
         </dependency>
-        <!-- mysql -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.25</version>
-        </dependency>
+
         <!-- lombok 插件 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -79,12 +74,7 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>0.1.0</version>
         </dependency>
-        <!-- shiro -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring-boot-starter</artifactId>
-            <version>1.4.0</version>
-        </dependency>
+
     </dependencies>
 
 

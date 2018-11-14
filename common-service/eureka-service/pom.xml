@@ -10,9 +10,9 @@
 
     <parent>
         <groupId>com.spring.cloud</groupId>
-        <artifactId>demo</artifactId>
+        <artifactId>common-service</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/>
+        <relativePath>../</relativePath>
     </parent>
 
     <dependencies>

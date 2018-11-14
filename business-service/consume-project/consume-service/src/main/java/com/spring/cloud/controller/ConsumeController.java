@@ -1,5 +1,7 @@
 package com.spring.cloud.controller;
 
+import com.spring.cloud.base.Result;
+import com.spring.cloud.base.ResultUtil;
 import com.spring.cloud.service.ConsumeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,7 +20,8 @@ public class ConsumeController {
 
     @ApiOperation(httpMethod = "GET",value = "测试Feign调用", notes = "测试Feign调用")
     @RequestMapping(value = "/test/{name}", method = RequestMethod.GET)
-    public String testFeign(@PathVariable String name){
-        return consumeService.testFeign(name);
+    public Result testFeign(@PathVariable String name){
+        String text = consumeService.testFeign(name);
+        return ResultUtil.success(text);
     }
 }

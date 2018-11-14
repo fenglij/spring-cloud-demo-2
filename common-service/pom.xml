@@ -18,6 +18,7 @@
         <module>hystrix-service</module>
         <module>core-service</module>
         <module>gateway-service</module>
+        <module>zipkin-service</module>
     </modules>
 
 

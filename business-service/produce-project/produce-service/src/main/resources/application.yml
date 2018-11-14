@@ -19,6 +19,13 @@ spring:
         password: admin
         instance:
           prefer-ip: true
+  zipkin:
+    base-url: http://127.0.0.1:8060  #指定zipkin的服务端，用于发送链路调用报告
+    compression:
+      enabled: true
+  sleuth:
+    sampler:
+      probability: 1  #采样率，值为[0,1]之间的任意实数，这里代表100%采集报告
 
 # 暴露所有actuator端点(2.0+配置方法)
 management:

@@ -1,19 +1,16 @@
 # spring-cloud-demo-2
-spring cloud demo(基于springcloud 2.0.1)
+spring cloud demo(基于springcloud 2021.0.4, springboot 2.7.4)
 集成组件：
-1. Eureka 注册中心
-2. Config 集中配置中心
-3. Hystrix 熔断
-4. Feign 声明式服务调用
-5. Admin 应用监控
-6. Hystrix board 整合
-7. 添加核心业务依赖 core-service
-8. 添加 spring cloud gateway
-9. 添加 zipkin
+1. nacos 注册中心
+2. nacos 集中配置中心
+3. Feign 声明式服务调用
+4. Admin 应用监控
+5. 添加核心业务依赖 core-service
+6. 添加 spring cloud gateway
+7. 添加 zipkin
+8. 移除config集中配置中心
+9. 移除eureka 注册中心
+10. 移除Hystrix 熔断器
 
-# Hystrix board 使用：<br>
-地址栏输入：<br>
-http://localhost:8030/hystrix<br>
-在Hystrix Dashboard下输入：<br>
-http://localhost:8000/actuator/hystrix.stream<br>
-点击：Monitor Stream 进入界面
+即将集成
+1. 阿里巴巴 Sentinel 哨兵

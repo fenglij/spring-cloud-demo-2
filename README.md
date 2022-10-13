@@ -17,5 +17,6 @@ spring cloud demo(基于springcloud 2021.0.4, springboot 2.7.4)
 
 备注
 1. nacos
-  nacos 使用源码编译部署。git地址：https://github.com/alibaba/nacos.git <br>
+  nacos 使用源码编译部署 <br>
+  git地址：https://github.com/alibaba/nacos.git <br>
   官方文档地址：https://nacos.io/zh-cn/docs/quick-start.html

@@ -14,3 +14,8 @@ spring cloud demo(基于springcloud 2021.0.4, springboot 2.7.4)
 
 即将集成
 1. 阿里巴巴 Sentinel 哨兵
+
+备注
+1. nacos
+  nacos 使用源码编译部署。git地址：https://github.com/alibaba/nacos.git
+  官方文档地址：https://nacos.io/zh-cn/docs/quick-start.html

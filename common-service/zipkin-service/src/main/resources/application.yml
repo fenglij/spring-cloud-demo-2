@@ -4,3 +4,11 @@ server:
 spring:
   application:
     name: zipkin-service
+
+management:
+  metrics:
+    web:
+      server:
+        request:
+          autotime:
+            enabled: false #关闭自动检测

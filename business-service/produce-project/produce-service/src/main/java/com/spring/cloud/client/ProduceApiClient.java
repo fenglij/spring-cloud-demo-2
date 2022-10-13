@@ -1,4 +1,4 @@
-package com.spring.cloud.controller;
+package com.spring.cloud.client;
 
 import com.spring.cloud.api.ProduceApi;
 import com.spring.cloud.service.ProduceService;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/produce-service")
-public class ProduceController implements ProduceApi {
+public class ProduceApiClient implements ProduceApi {
 
     @Autowired
     private ProduceService produceService;

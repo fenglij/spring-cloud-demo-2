@@ -60,6 +60,11 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+        <!-- springboot2.4.x版本后，对于bootstrap.properties/bootstrap.yml配置文件的支持，需要导入以下依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
 
     </dependencies>
 

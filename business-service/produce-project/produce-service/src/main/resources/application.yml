@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: produce-service
+  profiles:
+    active: dev
   security:
     user:
       name: admin8010
@@ -12,7 +14,9 @@ spring:
     nacos:
       config:
         server-addr: 1.117.200.16:8848
-        file-extension: yml
+        file-extension: yaml
+        prefix: ${spring.application.name}
+        namespace: ${spring.profiles.active}
       discovery:
         server-addr: 1.117.200.16:8848
         service: ${spring.application.name}

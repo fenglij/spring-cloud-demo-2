@@ -1,0 +1,26 @@
+# nacos 使用bootstrap.properties/bootstrap.yml配置（优先级 .properties > .yml > application.yml）
+# application.yml 配置内容交给nacos，再由spring加载
+server:
+  port: 8010
+
+spring:
+  application:
+    name: produce-service
+  profiles:
+    active: dev
+  security:
+    user:
+      name: admin8010
+      password: admin8010
+  cloud:
+    nacos:
+      config:
+        server-addr: 1.117.200.16:8848
+        file-extension: yaml
+        prefix: ${spring.application.name}
+        namespace: ${spring.profiles.active}
+      discovery:
+        server-addr: 1.117.200.16:8848
+        service: ${spring.application.name}
+      username: nacos
+      password: flj641

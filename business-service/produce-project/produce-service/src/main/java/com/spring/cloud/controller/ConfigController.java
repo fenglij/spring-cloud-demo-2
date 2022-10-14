@@ -15,16 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigController {
 
-//    @Value("${profile}")
-//    private String profile;
+    @Value("${test.hello}")
+    private String hello;
 
     @Autowired
     private Environment environment;
 
     @RequestMapping("/test")
     public String test(){
-
-//        return profile;
         return environment.getProperty("profile")+": aaaa";
+    }
+
+    @RequestMapping("/test/nacos")
+    public String testNacos(){
+        return hello;
     }
 }

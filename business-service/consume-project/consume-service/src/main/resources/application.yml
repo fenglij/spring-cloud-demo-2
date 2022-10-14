@@ -8,6 +8,9 @@ spring:
     nacos:
       config:
         server-addr: 1.117.200.16:8848
+      discovery:
+        server-addr: 1.117.200.16:8848
+        service: ${spring.application.name}
       username: nacos
       password: flj641
   boot:  #spirng admin 配置
@@ -18,6 +21,10 @@ spring:
         password: admin
         instance:
           service-url: http://127.0.0.1:8010
+          name: ${spring.application.name}
+          metadata:
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
   zipkin:
     base-url: http://127.0.0.1:8060  #指定zipkin的服务端，用于发送链路调用报告
     compression:

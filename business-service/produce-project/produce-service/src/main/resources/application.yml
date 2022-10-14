@@ -12,6 +12,10 @@ spring:
     nacos:
       config:
         server-addr: 1.117.200.16:8848
+        file-extension: yml
+      discovery:
+        server-addr: 1.117.200.16:8848
+        service: ${spring.application.name}
       username: nacos
       password: flj641
   boot:  #spirng admin 配置
@@ -22,7 +26,7 @@ spring:
         password: admin
         instance:
           service-url: http://127.0.0.1:8010 # 当前系统地址
-          name: produce-serivce-8010
+          name: ${spring.application.name}
           metadata:
             user.name: ${spring.security.user.name}
             user.password: ${spring.security.user.password}

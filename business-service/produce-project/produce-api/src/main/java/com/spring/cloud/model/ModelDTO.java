@@ -5,5 +5,5 @@ package com.spring.cloud.model;
  * 这样只需维护一份model和API定义
  * 测试用model，无任何意义，可删除
  */
-public class ApiEntity {
+public class ModelDTO {
 }

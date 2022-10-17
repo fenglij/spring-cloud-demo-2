@@ -20,10 +20,10 @@ public class RedisConfig {
             RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
         //使用fastjson序列化
-        FastJsonRedisSerializer fastJsonRedisSerializer = new FastJsonRedisSerializer(Object.class);
+        GsonRedisSerializer gsonRedisSerializer = new GsonRedisSerializer(Object.class);
         // value值的序列化采用fastJsonRedisSerializer
-        template.setValueSerializer(fastJsonRedisSerializer);
-        template.setHashValueSerializer(fastJsonRedisSerializer);
+        template.setValueSerializer(gsonRedisSerializer);
+        template.setHashValueSerializer(gsonRedisSerializer);
         // key的序列化采用StringRedisSerializer
         template.setKeySerializer(new StringRedisSerializer());
         template.setHashKeySerializer(new StringRedisSerializer());

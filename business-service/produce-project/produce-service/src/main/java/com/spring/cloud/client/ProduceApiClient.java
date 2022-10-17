@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/produce-service")
 public class ProduceApiClient implements ProduceApi {
 
     @Autowired

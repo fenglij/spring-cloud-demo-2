@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: admin-service
+  profiles:
+    active: dev
   security:
     user:
       name: admin
@@ -16,8 +18,9 @@ spring:
       discovery:
         server-addr: 1.117.200.16:8848
         service: ${spring.application.name}
+        namespace: ${spring.profiles.active}
       username: nacos
-      password: flj641
+      password: *
 
 # 暴露所有actuator端点(2.0+配置方法)
 management:

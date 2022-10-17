@@ -1,6 +1,7 @@
 package com.spring.cloud.service.impl;
 
 import com.spring.cloud.api.ProduceApi;
+import com.spring.cloud.feign.ProduceClientApi;
 import com.spring.cloud.service.ConsumeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +12,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ConsumeServiceImpl implements ConsumeService {
-    @Autowired
-    private ProduceApi produceApi;
 
-    @Override
+    @Autowired
+    private ProduceClientApi produceClientApi;
+
     public String testFeign(String str) {
-        String s = produceApi.testFeign(str);
+        String s = produceClientApi.testFeign(str);
         return s;
     }
 }

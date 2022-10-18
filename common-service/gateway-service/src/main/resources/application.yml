@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: gateway-service
+  profiles:
+    active: dev
   cloud:
     gateway:
       #具体的路由信息，是一个数组
@@ -19,10 +21,14 @@ spring:
         filters:
         #URI 截取，/consume-service/consume，StripPrefix=1 则截取结果为 /consume
         - StripPrefix=1
+    nacos:
+      config:
+        server-addr: 1.117.200.16:8848
+        file-extension: yml
+      discovery:
+        server-addr: 1.117.200.16:8848
+        service: ${spring.application.name}
+        namespace: ${spring.profiles.active}
+      username: nacos
+      password: *
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
-  instance:
-    instanceId: ${spring.cloud.client.hostname}:${server.port}:${spring.application.name}:${spring.application.instance_id:${random.value}}

@@ -11,6 +11,9 @@ spring cloud demo(基于springcloud 2021.0.4, springboot 2.7.4)
 8. 移除config集中配置中心
 9. 移除eureka 注册中心
 10. 移除Hystrix 熔断器
+11. redis
+12. mysql
+13. swagger2
 
 即将集成
 1. 阿里巴巴 Sentinel 哨兵

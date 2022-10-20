@@ -1,6 +1,9 @@
 package com.spring.cloud.service.impl;
 
+import com.dianping.cat.Cat;
+import com.dianping.cat.message.Transaction;
 import com.spring.cloud.api.ProduceApi;
+import com.spring.cloud.constant.CatConstants;
 import com.spring.cloud.feign.ProduceClientApi;
 import com.spring.cloud.service.ConsumeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +20,16 @@ public class ConsumeServiceImpl implements ConsumeService {
     private ProduceClientApi produceClientApi;
 
     public String testFeign(String str) {
-        String s = produceClientApi.testFeign(str);
-        return s;
+        Transaction t = Cat.newTransaction(CatConstants.TRANSACTION_TYPE, CatConstants.TRANSACTION_FEIGN_TEST);
+        try {
+            String s = produceClientApi.testFeign(str);
+            return s;
+        } catch (Exception e) {
+            t.setStatus(e);
+            Cat.logError(e);
+        } finally {
+            t.complete();
+        }
+        return null;
     }
 }

@@ -49,6 +49,10 @@
             <groupId>org.asynchttpclient</groupId>
             <artifactId>async-http-client</artifactId>
         </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+        </dependency>
 
         <!-- lombok 插件 -->
         <dependency>

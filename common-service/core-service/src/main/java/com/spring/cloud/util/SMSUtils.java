@@ -29,7 +29,7 @@ public class SMSUtils {
         PostMethod post = new PostMethod(URL);
         String result = null;
         try {
-            post.addRequestHeader("Content-Type",CONTENT_TYPE);//在头文件中设置转码
+            post.addRequestHeader("Content-Type", CONTENT_TYPE);//在头文件中设置转码
             NameValuePair[] data =  {
                     new NameValuePair("Uid", UID),
                     new NameValuePair("Key", KEY),

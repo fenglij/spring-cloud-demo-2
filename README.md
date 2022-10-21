@@ -24,15 +24,15 @@ spring cloud demo(基于springcloud 2021.0.4, springboot 2.7.4)
   git地址：https://github.com/alibaba/nacos.git <br>
   官方文档地址：https://nacos.io/zh-cn/docs/quick-start.html <br>
   控制台：http://${IP地址}:8848/nacos/#/login
-2. CAT使用war包部署tomcat，服务端版本：3.1.0
-  Linux环境：
-    新增目录 /data/appdatas/cat  新增文件 client.xml(server id 配置为服务端内网IP)，新增文件 datasources.xml(数据库配置为具体连接信息)
-    新增目录 /data/applogs/cat
-    启动tomcat
-    服务端配置 访问：http://服务器地址:8080/cat/s/config?op=serverConfigUpdate，配置server id 为服务端内网IP，保存
-    客户端路由 访问：http://1.117.200.16:8080/cat/s/config?op=routerConfigUpdate，配置server id 为服务端内网IP，保存
-  Window环境：
-    目录位置和tomcat盘符一致
-  注意：
+2. CAT使用war包部署tomcat，服务端版本：3.1.0 <br>
+  Linux环境： <br>
+    新增目录 /data/appdatas/cat  新增文件 client.xml(server id 配置为服务端内网IP)，新增文件 datasources.xml(数据库配置为具体连接信息) <br>
+    新增目录 /data/applogs/cat <br>
+    启动tomcat <br>
+    服务端配置 访问：http://服务器地址:8080/cat/s/config?op=serverConfigUpdate，配置server id 为服务端内网IP，保存 <br>
+    客户端路由 访问：http://1.117.200.16:8080/cat/s/config?op=routerConfigUpdate，配置server id 为服务端内网IP，保存 <br>
+  Window环境： <br>
+    目录位置和tomcat盘符一致 <br>
+  注意： <br>
     CAT默认使用5.X版本MySQL，如果使用8.X版本MySQL，需要将${TOMCAT_HOME}/webapps/cat/WEB-INF/lib 和 ${TOMCAT_HOME}/webapps/cat-home/WEB-INF/lib 目录下5.X版本驱动包置换为8.X     版本驱动包
     

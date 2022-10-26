@@ -43,6 +43,13 @@ management:
       exposure:
         include: "*"
 
+# cat starter bean装配开关
+cat:
+  switch:
+    client: true
+    chain: true
+
+
 
 
 

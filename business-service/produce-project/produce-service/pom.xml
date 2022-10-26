@@ -78,9 +78,26 @@
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
 
+        <!-- 添加核心依赖
         <dependency>
-            <groupId>com.dianping.cat</groupId>
-            <artifactId>cat-client</artifactId>
+            <groupId>com.spring.cloud</groupId>
+            <artifactId>core-service</artifactId>
+        </dependency>-->
+
+        <!-- 导入cat starter -->
+        <dependency>
+            <groupId>com.spring.boot.cat</groupId>
+            <artifactId>cat-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-openfeign</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     </dependencies>

@@ -19,6 +19,20 @@ spring:
     sampler:
       probability: 1  #采样率，值为[0,1]之间的任意实数，这里代表100%采集报告
 
+  redis:
+    database: 0
+    host: 1.117.200.16
+    port: 6379
+    password: *
+    timeout: 30s
+    lettuce:
+      pool:
+        max-active: 8 # 连接池最大连接数
+        max-wait: -1s   # 连接池最大阻塞等待时间 负数表示没限制
+        max-idle: 4 # 连接池中的最大空闲连接
+        min-idle: 0  # 连接池中的最小空闲连接
+    connect-timeout: 10s #连接超时时间
+
 # 暴露所有actuator端点(2.0+配置方法)
 management:
   endpoint:
@@ -28,4 +42,10 @@ management:
     web:
       exposure:
         include: "*"
+
+# cat starter bean装配开关
+cat:
+  switch:
+    client: true
+    chain: true
 

@@ -23,6 +23,7 @@ public class ConsumeServiceImpl implements ConsumeService {
         Transaction t = Cat.newTransaction(CatConstants.TRANSACTION_TYPE, CatConstants.TRANSACTION_FEIGN_TEST);
         try {
             String s = produceClientApi.testFeign(str);
+            t.setStatus(Transaction.SUCCESS);
             return s;
         } catch (Exception e) {
             t.setStatus(e);

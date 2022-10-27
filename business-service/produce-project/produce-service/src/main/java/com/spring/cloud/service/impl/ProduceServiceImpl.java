@@ -10,7 +10,7 @@ public class ProduceServiceImpl implements ProduceService {
     public String testFeign(String str) {
 
         if ("nacos".equals(str)) {
-            throw new RuntimeException("nacos 运行异常[test]");
+            //throw new RuntimeException("nacos 运行异常[test]");
         }
         return "hello: " + str;
     }

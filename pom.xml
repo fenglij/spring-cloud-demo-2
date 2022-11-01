@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.spring.cloud</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>spring-cloud-demo-2</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 

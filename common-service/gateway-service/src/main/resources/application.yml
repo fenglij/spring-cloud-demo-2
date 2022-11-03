@@ -23,4 +23,15 @@ spring:
         - StripPrefix=1
     sentinel:
       transport:
-        dashboard: 1.117.200.16:8888
+        dashboard: 1.117.200.16:8888  # 控制台服务地址（这里配置的是外网地址，实际客户端和服务台部署在同一网络，通过内网访问）
+        clientIp: 120.41.145.210  # 客户端IP（这里配置的是外网IP，因为控制台也是配置外网地址，客户端和控制台需要互通。如果都部署在同一网络，则不需要配置，默认通过内网访问即可）
+      eager: true #服务注启动，直接注册到dashboard
+      datasource:
+        ds:
+          nacos:
+            server-addr: 1.117.200.16:8848
+            dataId: ${spring.application.name}-sentinel.json
+            namespace: ${spring.profiles.active}
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow

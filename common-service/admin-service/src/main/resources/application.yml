@@ -10,17 +10,6 @@ spring:
     user:
       name: admin
       password: admin
-  cloud:
-    nacos:
-      config:
-        server-addr: 1.117.200.16:8848
-        file-extension: yml
-      discovery:
-        server-addr: 1.117.200.16:8848
-        service: ${spring.application.name}
-        namespace: ${spring.profiles.active}
-      username: nacos
-      password: *
 
 # 暴露所有actuator端点(2.0+配置方法)
 management:

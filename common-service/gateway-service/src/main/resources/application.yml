@@ -21,14 +21,6 @@ spring:
         filters:
         #URI 截取，/consume-service/consume，StripPrefix=1 则截取结果为 /consume
         - StripPrefix=1
-    nacos:
-      config:
-        server-addr: 1.117.200.16:8848
-        file-extension: yml
-      discovery:
-        server-addr: 1.117.200.16:8848
-        service: ${spring.application.name}
-        namespace: ${spring.profiles.active}
-      username: nacos
-      password: *
-
+    sentinel:
+      transport:
+        dashboard: 1.117.200.16:8888

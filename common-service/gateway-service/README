@@ -1,0 +1,5 @@
+Sentinel 配置 <br>
+dashboard: <br>
+启动：nohup java -Dserver.port=8888 -Dcsp.sentinel.dashboard.server=172.17.0.11:8888 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard-1.8.6.jar & <br>
+客户端: <br>
+启动：java -Dcsp.sentinel.dashboard.server=172.17.0.11:8888 -Dcsp.sentinel.log.dir=/data/sentinel/logs/csp -jar gateway-service-1.0-SNAPSHOT.jar <br>

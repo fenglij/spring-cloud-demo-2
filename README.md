@@ -15,9 +15,8 @@ spring cloud demo(基于springcloud 2021.0.4, springboot 2.7.4)
 12. mysql
 13. swagger2
 14. 美团CAT
+15. 阿里Sentinel流量哨兵
 
-即将集成
-1. 阿里巴巴 Sentinel 哨兵
 
 备注
 1. nacos(V2.1.1)使用源码编译部署 <br>
@@ -34,5 +33,10 @@ spring cloud demo(基于springcloud 2021.0.4, springboot 2.7.4)
   Window环境： <br>
     目录位置和tomcat盘符一致 <br>
   注意： <br>
-    CAT默认使用5.X版本MySQL，如果使用8.X版本MySQL，需要将${TOMCAT_HOME}/webapps/cat/WEB-INF/lib 和 ${TOMCAT_HOME}/webapps/cat-home/WEB-INF/lib 目录下5.X版本驱动包置换为8.X     版本驱动包
+    CAT默认使用5.X版本MySQL，如果使用8.X版本MySQL，需要将${TOMCAT_HOME}/webapps/cat/WEB-INF/lib 和 ${TOMCAT_HOME}/webapps/cat-home/WEB-INF/lib 目录下5.X版本驱动包置换为8.X     版本驱动包 <br>
+ 3. Sentinel <br>
+ Sentinel-dashboard源码改动，支持通过nacos持久化规则(分支：feature/intergration_nacos，maven打包部署) <br>
+ dashboard启动命令：nohup java -Dserver.port=8888 -Dcsp.sentinel.dashboard.server=172.17.0.11:8888 -Dproject.name=sentinel-dashboard -jar sentinel-dashboard.jar &  <br>
+ 客户端添加依赖：sentinel-spring-boot-starter
+ 
     
